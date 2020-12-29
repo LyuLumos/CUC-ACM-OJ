@@ -19,8 +19,5 @@ echo "{
 # MAYBE need to configure your hosts to connect GitHub
 
 # build
-git clone -b 2.0 https://github.com/QingdaoU/OnlineJudgeDeploy.git 
-cd OnlineJudgeDeploy
-docker-compose up -d
-
+# sudo docker-compose up -d
 # And you can go to have a Cappuccino
