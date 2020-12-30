@@ -10,16 +10,15 @@ git clone https://github.com/QingdaoU/OnlineJudgeFE.git
 
 cd OnlineJudgeFE
 
-# blahblah
-
-
 npm install
 
 # ******************* Rerun ****************************
 
+# blahblah
+
 NODE_ENV=development npm run build:dll
 
-export TARGET=127.0.0.1
+export TARGET="127.0.0.1"
 
 npm run dev
 
