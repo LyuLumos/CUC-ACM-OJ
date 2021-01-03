@@ -9,7 +9,6 @@
 
 
 - [CUC ACM OJ 使用文档](#cuc-acm-oj-使用文档)
-  - [开发环境](#开发环境)
   - [账号及权限](#账号及权限)
   - [增加题目](#增加题目)
   - [创建比赛](#创建比赛)
@@ -19,12 +18,6 @@
     - [Java](#java)
     - [Golang](#golang)
   - [Special Judge](#special-judge)
-  - [其他](#其他)
-
-## 开发环境
-- Ubuntu 20.04 Desktop LTS（支持16.04及以上版本）
-- based on Vue, Django and Docker
-
 
 ## 账号及权限
 
@@ -86,7 +79,9 @@
 只有超级管理员和比赛创建者可查看比赛者提交的代码和各样例评测结果以及封榜后查看实时排名。
 
 ## 语言选择和提交
+
 此部分在 `About/FAQ` 中也有说明。
+
 ### C/C++
 
 请使用输入输出进行读写，提交的代码不要包含`freopen` `File *`等文件读写的方式。支持`<bits/stdc++.h>`。
@@ -184,6 +179,4 @@ int spj(FILE *input, FILE *user_output){
 }
 ```
 
-## 其他
-
-有关此项目的建议请联系 [LyuLumos](mailto:3208413453@qq.com) 或在 [Discussion](https://github.com/LyuLumos/CUC-ACM-OJ/discussions) 中提出。
+基于

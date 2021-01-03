@@ -1,4 +1,4 @@
-# 自己写着玩的，错了不负责 /抠鼻
+# MAYBE need to configure your hosts to connect GitHub
 
 # in root
 sudo apt update && sudo apt install -y vim python3-pip curl git
@@ -16,8 +16,7 @@ echo "{
   "registry-mirrors": ["https://registry.docker-cn.com"]
 }" > /etc/docker/daemon.json
 
-# MAYBE need to configure your hosts to connect GitHub
 
 # build
-# sudo docker-compose up -d
+sudo docker-compose up -d
 # And you can go to have a Cappuccino
