@@ -11,6 +11,7 @@
 - [CUC ACM OJ 使用文档](#cuc-acm-oj-使用文档)
   - [开发环境](#开发环境)
   - [账号及权限](#账号及权限)
+  - [中英文切换](#中英文切换)
   - [增加题目](#增加题目)
   - [创建比赛](#创建比赛)
   - [语言选择和提交](#语言选择和提交)
@@ -19,6 +20,7 @@
     - [Java](#java)
     - [Golang](#golang)
   - [Special Judge](#special-judge)
+  - [测试数据生成示例](#测试数据生成示例)
   - [其他](#其他)
 
 ## 开发环境
@@ -28,12 +30,15 @@
 
 ## 账号及权限
 
-账号分为3类，可在超级管理员页面统一导入 `utf-8` 编码下的 `.csv` 文件（用户+密码+邮箱）或者统一批量生成，也可以由用户自行创建。
+账号分为3类，可在管理员页面统一导入 `utf-8` 编码下的 `.csv` 文件（用户+密码+邮箱）或者统一批量生成，也可以由用户自行创建。
 
-- 超级管理员（Super Admin）： 开发者 拥有所有权限，有且只有一位。
-- 普通管理员（Admin）：可以增加题目，创建比赛，发布公告，同时拥有普通用户的所有权限，可以有多位。
-- 普通用户（User）：提交代码、参加比赛，可以有多位。
+- 超级管理员（Super Admin）： 拥有所有权限。
+- 普通管理员（Admin）：可以增加题目，创建比赛，发布公告，同时拥有普通用户的所有权限。
+- 用户（User）：提交代码、参加比赛。
 
+## 中英文切换
+
+登陆账号后，在 `用户名` -> `Setting` -> `Language` 下更换页面的中英文。
 
 
 ## 增加题目
@@ -58,7 +63,7 @@
 - Code Template：代码预设，不建议勾选
 - Special Judge：专用
 - Type：题目类型选择，`ACM模式`代表`ACM/ICPC 规则`，`OI模式`增加了部分分
-- Testcase：测试数据。注意请上传包含 `1.in`、`1.out`、`2.in`...的**压缩包**，否则存在风险（可参考NOIP2020）。**只有Special Judge类题目可以不上传 `.out` 文件，没有输入的题目也应上传 `.in` 空文件。**
+- Testcase：测试数据。注意请上传包含 `1.in`、`1.out`、`2.in`...的**zip压缩包**，否则存在风险（可参考NOIP2020）。**只有Special Judge类题目可以不上传 `.out` 文件，没有输入的题目也应上传 `.in` 空文件。**
 - IO Mode：IO模式选择，请使用标准IO
 - Source：可标注的题目来源
 
@@ -183,7 +188,46 @@ int spj(FILE *input, FILE *user_output){
      */
 }
 ```
+## 测试数据生成示例
 
+我们建议使用专业的软件进行数据生成，如果题目限制比较简单可以使用以下程序生成。
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+#define random(a,b) ((a)+rand()%((b)-(a)+1))
+stringstream ss;
+
+int main( int argc, char *argv[] ) {
+	freopen("1.in", "w", stdout);
+	int seed=time(NULL);
+	if(argc) {
+		ss.clear();
+		ss<<argv[1];
+		ss>>seed;
+	}
+	srand(seed);
+	// 以上为随机数初始化，请勿修改
+
+    // 要生成的数据
+
+	return 0;
+}
+```
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	freopen("1.in", "r", stdin);
+	freopen("1.out", "w", stdout);
+
+    // 正确程序
+
+    return 0;
+}
+```
 ## 其他
 
 有关此项目的建议请联系 [LyuLumos](mailto:3208413453@qq.com) 或在 [Discussion](https://github.com/LyuLumos/CUC-ACM-OJ/discussions) 中提出。
