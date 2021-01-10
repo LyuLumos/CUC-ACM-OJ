@@ -61,8 +61,8 @@
 - Samples：样例
 - Hint：备注
 - Code Template：代码预设，不建议勾选
-- Special Judge：专用
-- Type：题目类型选择，`ACM模式`代表`ACM/ICPC 规则`，`OI模式`增加了部分分
+- Special Judge：用于答案不唯一的题目测试
+- Type：题目类型选择，`ACM模式`代表`ACM/ICPC 规则`，`OI模式`以最后一次提交为准，有部分分
 - Testcase：测试数据。注意请上传包含 `1.in`、`1.out`、`2.in`...的**zip压缩包**，否则存在风险（可参考NOIP2020）。**只有Special Judge类题目可以不上传 `.out` 文件，没有输入的题目也应上传 `.in` 空文件。**
 - IO Mode：IO模式选择，请使用标准IO
 - Source：可标注的题目来源
@@ -190,7 +190,7 @@ int spj(FILE *input, FILE *user_output){
 ```
 ## 测试数据生成示例
 
-我们建议使用专业的软件进行数据生成，如果题目限制比较简单可以使用以下程序生成。
+我们建议使用[专业的软件](https://github.com/luogu-dev/cyaron)进行数据生成，如果题目限制比较简单可以使用以下程序生成。
 
 ```cpp
 #include <bits/stdc++.h>
@@ -209,7 +209,7 @@ int main( int argc, char *argv[] ) {
 	srand(seed);
 	// 以上为随机数初始化，请勿修改
 
-    // 要生成的数据
+    	// 要生成的数据
 
 	return 0;
 }
@@ -223,9 +223,9 @@ int main() {
 	freopen("1.in", "r", stdin);
 	freopen("1.out", "w", stdout);
 
-    // 正确程序
+    	// 正确程序
 
-    return 0;
+    	return 0;
 }
 ```
 ## 其他
