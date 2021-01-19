@@ -11,10 +11,12 @@ chmod +x /usr/local/bin/docker-compose
 # install docker
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 
+service docker start
+
 # accelerator
-echo "{
-  "registry-mirrors": ["https://registry.docker-cn.com"]
-}" > /etc/docker/daemon.json
+# echo "{
+#   "registry-mirrors": ["https://registry.docker-cn.com"]
+# }" > /etc/docker/daemon.json
 
 
 # build
