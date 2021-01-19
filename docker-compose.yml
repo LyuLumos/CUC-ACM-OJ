@@ -44,7 +44,10 @@ services:
       # - judger_debug=1
   
   oj-backend:
-    image: registry.cn-hangzhou.aliyuncs.com/onlinejudge/oj_backend
+    # Origin
+    # image: registry.cn-hangzhou.aliyuncs.com/onlinejudge/oj_backend
+    # LyuLumos
+    image: registry.cn-hangzhou.aliyuncs.com/lyulumos/cuc-acmoj
     container_name: oj-backend
     restart: always
     depends_on:
