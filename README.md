@@ -3,10 +3,9 @@
 <p>
 <font size="2" color="grey">Author: LyuLumos. Powered by</font>
 <a href="https://github.com/QingdaoU/OnlineJudge/blob/master/LICENSE">OnlineJudge</a>
-<font size="2" color="grey">. 遵循</font>
-<a href="https://github.com/LyuLumos/CUC-ACM-OJ/blob/main/LICENSE">MIT协议</a>
 </p>
 
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FLyuLumos%2FCUC-ACM-OJ.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FLyuLumos%2FCUC-ACM-OJ?ref=badge_large)
 
 - [CUC ACM OJ 使用文档](#cuc-acm-oj-使用文档)
   - [开发环境](#开发环境)
