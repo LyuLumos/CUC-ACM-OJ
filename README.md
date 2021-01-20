@@ -24,7 +24,7 @@
   - [其他](#其他)
 
 ## 开发环境
-- Ubuntu 20.04 Desktop LTS（支持16.04及以上版本）
+- Ubuntu 20.04 Server LTS（支持16.04及以上版本），Desktop版本较为不稳定
 - based on Vue, Django and Docker
 
 
@@ -95,10 +95,34 @@
 ### C/C++
 
 请使用输入输出进行读写，提交的代码不要包含`freopen` `File *`等文件读写的方式。支持`<bits/stdc++.h>`。
+```cpp
+// C
+#include <stdio.h>
+int main()
+{
+    printf("Hello world!");
+    return 0;
+}
+// C++
+#include <iostream>
+using namespace std;
+int main()
+{
+	cout << "Hello world!" << endl;
+}
+```
+
+
 
 ### Python
 
 请使用输入输出进行读写。如 `t = int(input())`。
+```py
+# python2
+print "Hello world!"
+# python3
+print("Hello world!")
+```
 
 ### Java
 

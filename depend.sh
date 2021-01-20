@@ -14,8 +14,8 @@ curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 service docker start
 
 # accelerator
-# echo "{
-#   "registry-mirrors": ["https://registry.docker-cn.com"]
+# echo "{ \
+#   "registry-mirrors": ["https://registry.docker-cn.com"] \
 # }" > /etc/docker/daemon.json
 
 
