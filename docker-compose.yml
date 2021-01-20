@@ -2,25 +2,37 @@ version: "3"
 services:
 
   oj-redis:
-    image: redis:4.0-alpine
+    image: redis:6.0-alpine
     container_name: oj-redis
     restart: always
     volumes:
-      - ./data/redis:/data
+      - $PWD/data/redis:/data
   
   oj-postgres:
     image: postgres:10-alpine
     container_name: oj-postgres
     restart: always
     volumes:
-      - ./data/postgres:/var/lib/postgresql/data
+      - $PWD/data/postgres:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=onlinejudge
       - POSTGRES_USER=onlinejudge
       - POSTGRES_PASSWORD=onlinejudge
 
+  oj-forum:
+    image: php:7.4-fpm-alpine
+    container_name: oj-forum
+    restart: always
+    volumes:
+      - $PWD/data/forum:/forum
+    
   judge-server:
-    image: registry.cn-hangzhou.aliyuncs.com/onlinejudge/judge_server
+    # image: registry.cn-hangzhou.aliyuncs.com/onlinejudge/judge_server
+    # 原版镜像
+    # image: registry.cn-hangzhou.aliyuncs.com/wenjian_oj/judgeserver
+    # 开发版镜像
+    image: registry.cn-qingdao.aliyuncs.com/wenjian_oj/judge_server
+    # 稳定版镜像
     container_name: judge-server
     restart: always
     read_only: true
@@ -34,9 +46,9 @@ services:
     tmpfs:
       - /tmp
     volumes:
-      - ./data/backend/test_case:/test_case:ro
-      - ./data/judge_server/log:/log
-      - ./data/judge_server/run:/judger
+      - $PWD/data/backend/test_case:/test_case:ro
+      - $PWD/data/judge_server/log:/log
+      - $PWD/data/judge_server/run:/judger
     environment:
       - SERVICE_URL=http://judge-server:8080
       - BACKEND_URL=http://oj-backend:8000/api/judge_server_heartbeat/
@@ -44,18 +56,19 @@ services:
       # - judger_debug=1
   
   oj-backend:
-    # Origin
-    # image: registry.cn-hangzhou.aliyuncs.com/onlinejudge/oj_backend
-    # LyuLumos
-    image: registry.cn-hangzhou.aliyuncs.com/lyulumos/cuc-acmoj
+    image: registry.cn-hangzhou.aliyuncs.com/lyulumos/cuc-acmoj:1.1
+    # 稳定版
+    # image: registry.cn-hangzhou.aliyuncs.com/wenjian_oj/oj-backend
     container_name: oj-backend
     restart: always
     depends_on:
       - oj-redis
       - oj-postgres
       - judge-server
+      - oj-forum
     volumes:
-      - ./data/backend:/data
+      - $PWD/data/backend:/data
+      - $PWD/data/forum:/forum
     environment:
       - POSTGRES_DB=onlinejudge
       - POSTGRES_USER=onlinejudge
