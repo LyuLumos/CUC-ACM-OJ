@@ -1,6 +1,4 @@
 # CUC ACM OJ 使用文档
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FLyuLumos%2FCUC-ACM-OJ.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FLyuLumos%2FCUC-ACM-OJ?ref=badge_shield)
-
 
 <p>
 <font size="2" color="grey">Author: LyuLumos. Powered by</font>
@@ -256,7 +254,3 @@ int main() {
 ## 其他
 
 有关此项目的建议请联系 [LyuLumos](mailto:3208413453@qq.com) 或在 [Discussion](https://github.com/LyuLumos/CUC-ACM-OJ/discussions) 中提出。
-
-
-## License
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FLyuLumos%2FCUC-ACM-OJ.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FLyuLumos%2FCUC-ACM-OJ?ref=badge_large)
