@@ -11,8 +11,15 @@ npm install
 node -v
 npm -v
 
-# NODE_ENV=development npm run build:dll
 
-# export TARGET=http://127.0.0.1
-# npm run dev
+NODE_ENV=development npm run build:dll
+export TARGET=http://127.0.0.1
+npm run dev
 
+docker pull registry.cn-hangzhou.aliyuncs.com/onlinejudge/oj_backend
+NODE_ENV=production npm run build:dll
+npm run build
+docker cp ./dist CONTAINERID:/app/
+
+# Package the local image and upload it to Aliyun
+# visit https://cr.console.aliyun.com/repository/ for detailed information

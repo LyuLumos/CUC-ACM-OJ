@@ -29,8 +29,6 @@ services:
   judge-server:
     # image: registry.cn-hangzhou.aliyuncs.com/onlinejudge/judge_server
     # 原版镜像
-    # image: registry.cn-hangzhou.aliyuncs.com/wenjian_oj/judgeserver
-    # 开发版镜像
     image: registry.cn-qingdao.aliyuncs.com/wenjian_oj/judge_server
     # 稳定版镜像
     container_name: judge-server
@@ -56,7 +54,7 @@ services:
       # - judger_debug=1
   
   oj-backend:
-    image: registry.cn-hangzhou.aliyuncs.com/lyulumos/cuc-acmoj:1.1
+    image: registry.cn-hangzhou.aliyuncs.com/lyulumos/cuc-acmoj:1.2
     # 稳定版
     # image: registry.cn-hangzhou.aliyuncs.com/wenjian_oj/oj-backend
     container_name: oj-backend
