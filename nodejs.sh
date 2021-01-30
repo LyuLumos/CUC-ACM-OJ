@@ -6,9 +6,7 @@ sudo ln -s /usr/local/node-v8.12.0-linux-x64/bin/node /usr/local/bin/node
 sudo ln -s /usr/local/node-v8.12.0-linux-x64/bin/npm /usr/local/bin/npm
 
 # secondary development
-git clone https://github.com/QingdaoU/OnlineJudgeFE.git
-
-cd OnlineJudgeFE
+git clone https://github.com/LyuLumos/CUC-ACM-OJ-Front-End.git
 
 npm install
 
