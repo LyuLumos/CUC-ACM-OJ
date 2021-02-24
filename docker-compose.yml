@@ -27,10 +27,7 @@ services:
       - $PWD/data/forum:/forum
     
   judge-server:
-    # image: registry.cn-hangzhou.aliyuncs.com/onlinejudge/judge_server
-    # 原版镜像
     image: registry.cn-qingdao.aliyuncs.com/wenjian_oj/judge_server
-    # 稳定版镜像
     container_name: judge-server
     restart: always
     read_only: true
@@ -51,12 +48,9 @@ services:
       - SERVICE_URL=http://judge-server:8080
       - BACKEND_URL=http://oj-backend:8000/api/judge_server_heartbeat/
       - TOKEN=CHANGE_THIS
-      # - judger_debug=1
   
   oj-backend:
     image: registry.cn-hangzhou.aliyuncs.com/lyulumos/cuc-acmoj:1.2
-    # 稳定版
-    # image: registry.cn-hangzhou.aliyuncs.com/wenjian_oj/oj-backend
     container_name: oj-backend
     restart: always
     depends_on:

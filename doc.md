@@ -1,5 +1,6 @@
 # CUC-ACM-OJ 用户文档
 - [CUC-ACM-OJ 用户文档](#cuc-acm-oj-用户文档)
+  - [Root 密码](#root-密码)
   - [账号及权限](#账号及权限)
   - [中英文切换](#中英文切换)
   - [增加题目](#增加题目)
@@ -12,6 +13,8 @@
   - [Special Judge](#special-judge)
   - [测试数据生成示例](#测试数据生成示例)
 
+## Root 密码
+Root 的默认密码为 `rootroot`，拥有最高权限，**请在首次登录成功后修改密码**。
 
 ## 账号及权限
 
@@ -48,7 +51,7 @@
 - Code Template：代码预设，不建议勾选
 - Special Judge：用于答案不唯一的题目测试
 - Type：题目类型选择，`ACM模式`代表`ACM/ICPC 规则`，`OI模式`以最后一次提交为准，有部分分
-- Testcase：测试数据。注意请上传包含 `1.in`、`1.out`、`2.in`...的**zip压缩包**，否则存在风险（可参考NOIP2020）。**只有Special Judge类题目可以不上传 `.out` 文件，没有输入的题目也应上传 `.in` 空文件。**
+- Testcase：测试数据。注意请上传**直接**包含 `1.in`、`1.out`、`2.in`...的**zip压缩包**。**只有Special Judge类题目可以不上传 `.out` 文件，没有输入的题目也应上传 `.in` 空文件。**
 - IO Mode：IO模式选择，请使用标准IO
 - Source：可标注的题目来源
 
@@ -80,6 +83,8 @@
 ### C/C++
 
 请使用输入输出进行读写，提交的代码不要包含`freopen` `File *`等文件读写的方式。支持`<bits/stdc++.h>`。
+
+提交选项里可选 `C/C++11,14,17`，默认选择 `C/C++11`。缺失 `return 0;` 不会影响代码结果，但是我们仍建议补全。 
 ```cpp
 // C
 #include <stdio.h>
@@ -94,6 +99,7 @@ using namespace std;
 int main()
 {
 	cout << "Hello world!" << endl;
+    return 0;
 }
 ```
 
