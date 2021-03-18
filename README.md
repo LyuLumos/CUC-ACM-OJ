@@ -5,6 +5,8 @@
 <a href="https://github.com/QingdaoU/OnlineJudge/blob/master/LICENSE">OnlineJudge</a>
 </p>
 
+**This repository is ARCHIVED on March 19th, 2021.**
+
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FLyuLumos%2FCUC-ACM-OJ.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FLyuLumos%2FCUC-ACM-OJ?ref=badge_large)
 
 
